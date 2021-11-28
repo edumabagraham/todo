@@ -47,5 +47,22 @@ li{
 
 #tip{
     text-align: center;
+    margin-top: 40px;
+}
+
+a.add{
+    float: right;
     margin-top: 10px;
+    background-color: #F38BA0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #EDF6E5; 
+    padding: 3px;   
+    border-radius: 8px;
+}
+
+a.add:hover{
+    position: relative;
+    top: 1px;
+    background-color:#F56FAD ;
 }

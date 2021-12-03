@@ -11,17 +11,19 @@ todoList = document.getElementById('itemList');
 todoForm = document.getElementById('list');
 addList = document.getElementById('button');
 
-todoForm.addEventListener('submit',appendItemToList,false);
-addList.addEventListener('click', appendItemToList, false);
+todoForm.addEventListener('submit',appendItemToList,false);          //Todo is added when "Enter" is pressed.
+addList.addEventListener('click', appendItemToList, false);          //Todo is added when the button is clicked.
 
 
+//Crossout item on the list
 
-//Remove item from the list
-/* The approah i know so far will fail
-because the li element when appended do 
-not have individual ids that will help me
-them*/
+function markAsComplete(e){
+  if (e.target.tagName.toLowerCase() === 'li') {
+    e.target.style.textDecoration = "line-through";
+  }
+}
 
+todoList.addEventListener('click', markAsComplete,false);
 
 
 

@@ -1,25 +1,19 @@
-var textArea,item,todoItem,itemText,addLink,element;
-
-//Focus on textarea after the page has loaded
-function setUp(){
-    textArea = document.getElementById("todo");
-    textArea.focus();
-}
-
+var textArea,item,addList,todoList,todoForm;
 
 function appendItemToList(e) {
   e.preventDefault();
   item = document.createElement("li");
-  todoItem = document.getElementById("todo").value; // Get todo item entered
-  itemText = document.createTextNode(todoItem);
-  item.appendChild(itemText);
-  element.appendChild(item);
+  item.textContent = document.getElementById("todo").value;
+  todoList.appendChild(item);
 }
 
-element = document.getElementById('itemList');
-addLink = document.getElementById('button');
-addLink.addEventListener('click', appendItemToList, false);
-window.addEventListener('load', setUp, false);
+todoList = document.getElementById('itemList');
+todoForm = document.getElementById('list');
+addList = document.getElementById('button');
+
+todoForm.addEventListener('submit',appendItemToList,false);
+addList.addEventListener('click', appendItemToList, false);
+
 
 
 //Remove item from the list

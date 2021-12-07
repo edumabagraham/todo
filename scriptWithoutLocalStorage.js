@@ -1,4 +1,4 @@
-var textArea,item,addList,todoList,todoForm;
+var textArea,item,addToList,todoList,todoForm, savedTodos,input, clickedListItem;
 
 function appendItemToList(e) {
   e.preventDefault();
@@ -24,6 +24,4 @@ function markAsComplete(e){
 }
 
 todoList.addEventListener('click', markAsComplete,false);
-
-
 
